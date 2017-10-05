@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace要为mapper接口的路径  -->
+<mapper namespace="com.AdesK.mapper.UserMapper">
+  <select id="findUserById" parameterType="java.lang.Integer" resultType="com.AdesK.model.User">
+    SELECT * FROM USER WHERE id=#{id,jdbcType=INTEGER}
+  </select>
+</mapper>
